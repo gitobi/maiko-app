@@ -1,0 +1,9 @@
+version: '3'
+services:
+  development:
+    build: .
+    ports:
+      - "8000:8000"
+    command: yarn develop
+    volumes:
+      - .:/app:cached

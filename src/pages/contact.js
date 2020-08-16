@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
+const ContactPage = () => (
   <Layout>
     <SEO title="お問い合わせ" />
     <h1>お問い合わせはこちらからお願いします。</h1>
@@ -22,13 +22,13 @@ const SecondPage = () => (
 
       {/* お問い合わせフォームの本体 */}
       <p>
-        <label>お名前: <input type="text" name="name" /></label>
+        <label htmlFor="name">お名前: <input type="text" id="name" name="name" /></label>
       </p>
       <p>
-        <label>メールアドレス: <input type="email" name="email" /></label>
+        <label htmlFor="email">メールアドレス: <input type="email" id="email" name="email" /></label>
       </p>
       <p>
-        <label>お問い合わせ内容: <textarea name="message"></textarea></label>
+        <label htmlFor="message">お問い合わせ内容: <textarea id="message" name="message"></textarea></label>
       </p>
       <p>
         <button type="submit">送信する</button>
@@ -37,4 +37,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default ContactPage

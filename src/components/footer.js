@@ -1,8 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Footer = () => (
   <footer>
-    &copy; 2020 <a href="https://www.gitobi.com" target="_blank" rel="noopener noreferrer">Gitobi LLC.</a>
+    <ul>
+      <li><Link to="/">ホーム</Link></li>
+      <li><Link to="/contact">お問い合わせ</Link></li>
+    </ul>
+    <p>&copy; 2020 <a href="https://www.gitobi.com" target="_blank" rel="noopener noreferrer">Gitobi LLC.</a></p>
   </footer>
 )
 

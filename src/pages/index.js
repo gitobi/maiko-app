@@ -1,8 +1,6 @@
 import React from "react"
-//import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -24,13 +22,6 @@ const IndexPage = () => (
     <p>私たちは2016年から、日本の果物の潜在能力を引き出すための栽培方法を、農業技術や情報技術の力を駆使して研究開発しています。</p>
     <h2>透明性について</h2>
     <p>Maiko を安心して食べられるように、私たちは積極的に産地や栽培履歴、物流履歴を公開し、透明性を高めていきます。</p>
-    {/*
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    */}
   </Layout>
 )
 

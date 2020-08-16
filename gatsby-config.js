@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Maiko`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Maiko は、 Gitobi 合同会社が栽培・販売する日本の果物です。おいしく安心安全な日本の果物をいつでも食べられる幸せを、皆様にお贈りすることを私たちは目指しています。`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

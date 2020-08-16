@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 const ContactPage = () => (
   <Layout>
     <SEO title="お問い合わせ" />
-    <h1>お問い合わせはこちらからお願いします。</h1>
+    <h1>お問い合わせ</h1>
     <form name="お問い合わせフォーム" method="POST" netlify-honeypot="iambot" data-netlify="true">
       {/* Netlify Forms で必須のフィールド */}
       <input type="hidden" name="form-name" value="お問い合わせフォーム" />

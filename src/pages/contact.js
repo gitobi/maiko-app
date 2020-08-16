@@ -8,10 +8,10 @@ const SecondPage = () => (
     <SEO title="お問い合わせ" />
     <h1>お問い合わせはこちらからお願いします。</h1>
     <form name="お問い合わせフォーム" method="POST" netlify-honeypot="iambot" data-netlify="true">
-      // Netlify Forms で必須のフィールド
+      {/* Netlify Forms で必須のフィールド */}
       <input type="hidden" name="form-name" value="お問い合わせフォーム" />
 
-      // Spam対策用のフィールド
+      {/* Spam対策用のフィールド */}
       <p
         style={{
           display: `none`,
@@ -20,7 +20,7 @@ const SecondPage = () => (
         <input type="text" name="iambot" />
       </p>
 
-      // お問い合わせフォームの本体
+      {/* お問い合わせフォームの本体 */}
       <p>
         <label>お名前: <input type="text" name="name" /></label>
       </p>

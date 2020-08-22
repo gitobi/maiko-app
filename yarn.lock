@@ -979,6 +979,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@csstools/normalize.css@^11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-11.0.1.tgz#31ffab0bff5f4f09551e059359bc1977ac83a974"
+  integrity sha512-kUlWZHQkll+lOlYdj7dg8XwziO9WALkfG2dAXLITZMB8gO99CXQBH5W/HleXC3YwWFWXVxe1UClMk/2qsB9oAw==
+
 "@graphql-tools/schema@^6.0.9":
   version "6.0.11"
   resolved "https://registry.yarnpkg.com/@graphql-tools/schema/-/schema-6.0.11.tgz#4623c3662a8843822e36139855504ef8d7d89088"
@@ -11436,6 +11441,11 @@ safe-regex@^1.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+sanitize.css@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-12.0.1.tgz#f20369357557ba2b41d7278eeb3ea691a3bee514"
+  integrity sha512-QbusSBnWHaRBZeTxsJyknwI0q+q6m1NtLBmB76JfW/rdVN7Ws6Zz70w65+430/ouVcdNVT3qwrDgrM6PaYyRtw==
 
 sass-graph@2.2.5:
   version "2.2.5"

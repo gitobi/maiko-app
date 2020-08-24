@@ -1,0 +1,50 @@
+.header {
+  padding: 5px;
+  background-color: $color-light-yellow-lighten;
+}
+
+.top-link-container {
+  text-align: center;
+}
+
+.site-logo {
+  height: 80px;
+}
+
+.site-font {
+  height: 80px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header-nav-item-link {
+  padding: 5px 2px;
+  border-bottom: 1px solid $color-primary-text;
+
+  &:link, &:visited, &:hover, &:active, &:focus {
+    color: $color-primary-text;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $color-primary-text;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-logo {
+    height: 50px;
+  }
+
+  .site-font {
+    height: 50px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}

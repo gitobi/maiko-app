@@ -4,6 +4,7 @@ module.exports = {
     description: `Maiko は、 Gitobi 合同会社が栽培・販売する日本の果物です。おいしく安心安全な日本の果物をいつでも食べられる幸せを、皆様にお贈りすることを私たちは目指しています。`,
   },
   plugins: [
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -12,7 +13,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: `
+          @import "${__dirname}/src/global_styles/colors";
+          @import "${__dirname}/src/global_styles/variables";
+        `,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

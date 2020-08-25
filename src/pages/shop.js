@@ -10,7 +10,7 @@ const ShopPage = () => (
     <p>以下のフォームより、ご購入希望の商品をお知らせください。</p>
     <p>数量に限りがあるため、ご希望通りの数量を販売できない可能性がございます。</p>
     <p>ご購入可能な数量が確定いたしましたら、メールにてご連絡いたします。</p>
-    <p>ご購入代金の精算方法と商品の受け渡し方法につきましても、メールにてご案内いたします。</p>
+    <p>ご購入代金の精算方法と商品の受け渡し方法（手渡し、郵送）につきましても、メールにてご案内いたします。</p>
     <form name="Maiko オンラインストアフォーム" method="POST" netlify-honeypot="iambot" data-netlify="true">
       {/* Netlify Forms で必須のフィールド */}
       <input type="hidden" name="form-name" value="Maiko オンラインストアフォーム" />
@@ -33,7 +33,7 @@ const ShopPage = () => (
       </p>
       <p>
         <label htmlFor="maiko_ruby_nashi_pear_quantity">
-          Maiko ルビー梨 220円（税込）/個 : <select id="maiko_ruby_nashi_pear_quantity" name="maiko_ruby_nashi_pear_quantity[]">
+          Maiko ルビー梨 200円（税込）/個 : <select id="maiko_ruby_nashi_pear_quantity" name="maiko_ruby_nashi_pear_quantity[]">
             <option value="1">1個</option>
             <option value="2">2個</option>
             <option value="4">4個</option>
@@ -42,7 +42,7 @@ const ShopPage = () => (
       </p>
       <p>
         <label htmlFor="maiko_gold_peach_quantity">
-          Maiko ゴールドピーチ 220円（税込）/個 : <select id="maiko_gold_peach_quantity" name="maiko_gold_peach_quantity[]">
+          Maiko ゴールドピーチ 200円（税込）/個 : <select id="maiko_gold_peach_quantity" name="maiko_gold_peach_quantity[]">
             <option value="1">1個</option>
             <option value="2">2個</option>
           </select>

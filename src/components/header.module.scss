@@ -17,11 +17,18 @@
 
 .header-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.header-nav-item {
+  width: 250px;
+  text-align: center;
 }
 
 .header-nav-item-link {
   padding: 5px 2px;
+  width: 100%;
+  text-align: center;
   border-bottom: 1px solid $color-primary-text;
 
   &:link, &:visited, &:hover, &:active, &:focus {

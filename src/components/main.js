@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import mainStyles from "./main.module.scss"
+
 const Main = ({ children }) => (
-  <main>{children}</main>
+  <main className={mainStyles.main}>{children}</main>
 )
 
 Main.propTypes = {

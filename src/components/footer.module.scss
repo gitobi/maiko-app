@@ -1,0 +1,87 @@
+.footer {
+  padding: 5px;
+
+  background-color: $color-white;
+  color: $color-primary-text;;
+}
+
+.footer-nav {
+  margin: 0;
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+}
+
+.footer-nav-item {
+  height: 100%;
+  width: 250px;
+}
+
+.footer-nav-item-link {
+  display: inline-block;
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+
+  background-color: $color-white;
+  border: 1px solid $color-primary-text;
+  border-radius: 5px;
+
+  &:link, &:visited, &:hover, &:active, &:focus {
+    color: $color-primary-text;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+}
+
+.footer-copy-right {
+  padding: 0;
+  margin: 5px 0 0 0;
+  text-align: center;
+  font-size: .8rem;
+}
+
+.footer-copy-right-link {
+  border-bottom: 1px solid $color-primary-text;
+  &:link, &:visited, &:hover, &:active, &:focus {
+    color: $color-primary-text;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 5px 0 0 0;
+    // 最下部に固定
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px; // NOTE: 上の要素のpadding-bottomを同じ高さだけ取る必要あり
+
+    border-top: 1px solid $color-primary-text;
+  }
+
+  .footer-nav-item {
+    width: 80px;
+  }
+
+  .footer-nav-item-link {
+    border: none;
+    border-radius: 0;
+  }
+
+  .footer-nav-item-link-icon {
+    font-size: 1.5rem;
+  }
+
+  .footer-nav-item-link-text {
+    display: none;
+  }
+
+  .footer-copy-right {
+    font-size: .6rem;
+  }
+}

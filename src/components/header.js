@@ -17,17 +17,17 @@ const Header = () => (
     </div>
     <nav>
       <ul className={headerStyles.headerNav}>
-        <li>
+        <li className={headerStyles.headerNavItem}>
           <Link className={headerStyles.headerNavItemLink} to="/">
             <FontAwesomeIcon icon={faHome} /> ホーム
           </Link>
         </li>
-        <li>
+        <li className={headerStyles.headerNavItem}>
           <Link className={headerStyles.headerNavItemLink} to="/shop">
             <FontAwesomeIcon icon={faShoppingCart} /> オンラインストア
           </Link>
         </li>
-        <li>
+        <li className={headerStyles.headerNavItem}>
           <Link className={headerStyles.headerNavItemLink} to="/contact">
             <FontAwesomeIcon icon={faEnvelope} /> お問い合わせ
           </Link>

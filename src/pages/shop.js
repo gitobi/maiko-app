@@ -34,6 +34,7 @@ const ShopPage = () => (
       <p>
         <label htmlFor="maiko_ruby_nashi_pear_quantity">
           Maiko ルビー梨 200円（税込）/個 : <select id="maiko_ruby_nashi_pear_quantity" name="maiko_ruby_nashi_pear_quantity[]">
+            <option value="0">0個</option>
             <option value="1">1個</option>
             <option value="2">2個</option>
             <option value="4">4個</option>
@@ -43,6 +44,7 @@ const ShopPage = () => (
       <p>
         <label htmlFor="maiko_gold_peach_quantity">
           Maiko ゴールドピーチ 200円（税込）/個 : <select id="maiko_gold_peach_quantity" name="maiko_gold_peach_quantity[]">
+            <option value="0">0個</option>
             <option value="1">1個</option>
             <option value="2">2個</option>
           </select>

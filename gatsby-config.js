@@ -32,7 +32,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
-        display: `Maiko`,
+        display: `standalone`,
         icon: `src/images/logo.png`,
       },
     },

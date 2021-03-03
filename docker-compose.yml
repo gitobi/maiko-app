@@ -2,8 +2,11 @@ version: '3'
 services:
   development:
     build: .
+    environment:
+      - INTERNAL_STATUS_PORT=8001
     ports:
       - "8000:8000"
+      - "8001:8001"
     command: yarn develop
     volumes:
       - .:/app:cached

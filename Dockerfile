@@ -1,6 +1,6 @@
-FROM node:14.5.0-alpine
+FROM node:14.15.3-alpine
 
 RUN apk update && \
-    apk add git util-linux
+    apk add git util-linux autoconf make gcc g++ automake libtool pkgconf nasm
 
 WORKDIR /app

@@ -5,7 +5,6 @@ import Header from "./header"
 import Main from "./main"
 import Footer from "./footer"
 
-import "@csstools/normalize.css"
 import "sanitize.css"
 import "sanitize.css/forms.css"
 import "sanitize.css/assets.css"

@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const ShopPage = () => (
   <Layout>
-    <SEO title="Maiko オンラインストア" />
+    <Seo title="Maiko オンラインストア" />
     <h1>Maiko オンラインストア</h1>
     <p>以下のフォームより、ご購入希望の商品をお知らせください。</p>
     <p>数量に限りがあるため、ご希望通りの数量を販売できない可能性がございます。</p>

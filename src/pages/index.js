@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Maiko について" />
+    <Seo title="Maiko について" />
     <h1>素敵な日本の果物をあなたに</h1>
     <h2>Maiko について</h2>
     <p>Maiko は、 Gitobi 合同会社が栽培・販売する日本の果物です。</p>

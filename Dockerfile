@@ -1,6 +1,18 @@
-FROM node:14.15.3-alpine
+FROM node:16.4.2-alpine
 
 RUN apk update && \
-    apk add git util-linux autoconf make gcc g++ automake libtool pkgconf nasm
+    apk add --no-cache git \
+    util-linux \
+    autoconf \
+    make \
+    gcc \
+    g++ \
+    automake \
+    libtool \
+    vips-dev \
+    pkgconf \
+    nasm \
+    python3 && \
+    ln -s /usr/bin/python3 /usr/bin/python
 
 WORKDIR /app

@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="お問い合わせ" />
+    <Seo title="お問い合わせ" />
     <h1>お問い合わせ</h1>
     <form name="お問い合わせフォーム" method="POST" netlify-honeypot="iambot" data-netlify="true">
       {/* Netlify Forms で必須のフィールド */}

@@ -7,7 +7,12 @@ const ContactPage = () => (
   <Layout>
     <Seo title="お問い合わせ" />
     <h1>お問い合わせ</h1>
-    <form name="お問い合わせフォーム" method="POST" netlify-honeypot="iambot" data-netlify="true">
+    <form
+      name="お問い合わせフォーム"
+      method="POST"
+      netlify-honeypot="iambot"
+      data-netlify="true"
+    >
       {/* Netlify Forms で必須のフィールド */}
       <input type="hidden" name="form-name" value="お問い合わせフォーム" />
 
@@ -22,13 +27,19 @@ const ContactPage = () => (
 
       {/* お問い合わせフォームの本体 */}
       <p>
-        <label htmlFor="name">お名前: <input type="text" id="name" name="name" /></label>
+        <label htmlFor="name">
+          お名前: <input type="text" id="name" name="name" />
+        </label>
       </p>
       <p>
-        <label htmlFor="email">メールアドレス: <input type="email" id="email" name="email" /></label>
+        <label htmlFor="email">
+          メールアドレス: <input type="email" id="email" name="email" />
+        </label>
       </p>
       <p>
-        <label htmlFor="message">お問い合わせ内容: <textarea id="message" name="message"></textarea></label>
+        <label htmlFor="message">
+          お問い合わせ内容: <textarea id="message" name="message"></textarea>
+        </label>
       </p>
       <p>
         <button type="submit">送信する</button>

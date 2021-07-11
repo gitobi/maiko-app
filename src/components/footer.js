@@ -2,7 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faShoppingCart, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import {
+  faHome,
+  faShoppingCart,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons"
 import {
   footer,
   footerNav,
@@ -11,7 +15,7 @@ import {
   footerNavItemLinkIcon,
   footerNavItemLinkText,
   footerCopyRight,
-  footerCopyRightLink
+  footerCopyRightLink,
 } from "./footer.module.scss"
 
 const Footer = () => (
@@ -26,13 +30,19 @@ const Footer = () => (
         </li>
         <li className={footerNavItem}>
           <Link className={footerNavItemLink} to="/shop">
-            <FontAwesomeIcon className={footerNavItemLinkIcon} icon={faShoppingCart} />
+            <FontAwesomeIcon
+              className={footerNavItemLinkIcon}
+              icon={faShoppingCart}
+            />
             <span className={footerNavItemLinkText}> オンラインストア</span>
           </Link>
         </li>
         <li className={footerNavItem}>
           <Link className={footerNavItemLink} to="/contact">
-            <FontAwesomeIcon className={footerNavItemLinkIcon} icon={faEnvelope} />
+            <FontAwesomeIcon
+              className={footerNavItemLinkIcon}
+              icon={faEnvelope}
+            />
             <span className={footerNavItemLinkText}> お問い合わせ</span>
           </Link>
         </li>
@@ -40,7 +50,12 @@ const Footer = () => (
     </nav>
     <p className={footerCopyRight}>
       &copy; 2020&nbsp;
-      <a className={footerCopyRightLink} href="https://www.gitobi.com" target="_blank" rel="noopener noreferrer">
+      <a
+        className={footerCopyRightLink}
+        href="https://www.gitobi.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Gitobi LLC.
       </a>
     </p>

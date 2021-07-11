@@ -4,7 +4,11 @@ import { Link } from "gatsby"
 import logo from "../images/logo.png"
 import font from "../images/font.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faShoppingCart, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import {
+  faHome,
+  faShoppingCart,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons"
 import {
   header,
   topLinkContainer,
@@ -12,7 +16,7 @@ import {
   siteFont,
   headerNav,
   headerNavItem,
-  headerNavItemLink
+  headerNavItemLink,
 } from "./header.module.scss"
 
 const Header = () => (

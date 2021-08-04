@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import logo from "../images/logo.png"
-import font from "../images/font.png"
+import logo from "../../images/logo.png"
+import font from "../../images/font.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,

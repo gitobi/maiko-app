@@ -2,29 +2,17 @@ module.exports = {
   siteMetadata: {
     title: `Maiko`,
     description: `Maiko は、 Gitobi 合同会社が栽培・販売する日本の果物です。おいしく安心安全な日本の果物をいつでも食べられる幸せを、皆様にお贈りすることを私たちは目指しています。`,
+    siteUrl: `https://maiko.app`,
   },
   plugins: [
     `gatsby-plugin-fontawesome-css`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        additionalData: `
-          @import "${__dirname}/src/styles/colors";
-          @import "${__dirname}/src/styles/variables";
-        `,
+        trackingId: `G-CCPENSNREP`,
       },
     },
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,15 +26,35 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           default: require.resolve(
-            "./src/components/templates/base-layout.js"
+            `./src/components/templates/base-layout.js`
           ),
         },
       },
     },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        additionalData: `
+          @import "${__dirname}/src/styles/colors";
+          @import "${__dirname}/src/styles/variables";
+        `,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
   ],
 }

@@ -1,3 +1,7 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Maiko`,
@@ -53,6 +57,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        password: process.env.GATSBY_SHOPIFY_ADMIN_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
       },
     },
     `gatsby-transformer-sharp`,

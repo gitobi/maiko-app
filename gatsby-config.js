@@ -4,9 +4,9 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    title: `Maiko`,
     description: `Maiko は、 Gitobi 合同会社が栽培・販売する日本の果物です。おいしく安心安全な日本の果物をいつでも食べられる幸せを、皆様にお贈りすることを私たちは目指しています。`,
     siteUrl: `https://maiko.app`,
+    title: `Maiko`,
   },
   plugins: [
     `gatsby-plugin-fontawesome-css`,
@@ -57,6 +57,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     {

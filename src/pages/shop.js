@@ -4,10 +4,10 @@ import { Link, graphql } from "gatsby"
 import ShopifyImage from "../components/atoms/images/shopify-image"
 import MinPrice from "../components/atoms/prices/min-price"
 import BaseLayout from "../components/templates/base-layout"
+import Seo from "../components/seo"
 
 import { StoreContext } from "@gitobi/gitobi-shopify-context"
 
-import Seo from "../components/seo"
 
 const ShopPage = ({ data }) => {
   const { store } = useContext(StoreContext)

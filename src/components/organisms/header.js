@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
   faShoppingCart,
-  faEnvelope,
+  faStore,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   header,
@@ -36,12 +36,12 @@ const Header = () => (
         </li>
         <li className={headerNavItem}>
           <Link className={headerNavItemLink} to="/shop">
-            <FontAwesomeIcon icon={faShoppingCart} /> オンラインストア
+            <FontAwesomeIcon icon={faStore} /> オンラインストア
           </Link>
         </li>
         <li className={headerNavItem}>
-          <Link className={headerNavItemLink} to="/contact">
-            <FontAwesomeIcon icon={faEnvelope} /> お問い合わせ
+          <Link className={headerNavItemLink} to="/cart">
+            <FontAwesomeIcon icon={faShoppingCart} /> カート
           </Link>
         </li>
       </ul>

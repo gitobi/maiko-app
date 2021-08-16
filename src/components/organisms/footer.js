@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
   faShoppingCart,
-  faEnvelope,
+  faStore,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   footer,
@@ -32,18 +32,18 @@ const Footer = () => (
           <Link className={footerNavItemLink} to="/shop">
             <FontAwesomeIcon
               className={footerNavItemLinkIcon}
-              icon={faShoppingCart}
+              icon={faStore}
             />
             <span className={footerNavItemLinkText}> オンラインストア</span>
           </Link>
         </li>
         <li className={footerNavItem}>
-          <Link className={footerNavItemLink} to="/contact">
+          <Link className={footerNavItemLink} to="/cart">
             <FontAwesomeIcon
               className={footerNavItemLinkIcon}
-              icon={faEnvelope}
+              icon={faShoppingCart}
             />
-            <span className={footerNavItemLinkText}> お問い合わせ</span>
+            <span className={footerNavItemLinkText}> カート</span>
           </Link>
         </li>
       </ul>

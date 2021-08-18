@@ -34,7 +34,7 @@ const Footer = () => (
               className={footerNavItemLinkIcon}
               icon={faStore}
             />
-            <span className={footerNavItemLinkText}> オンラインストア</span>
+            <span className={footerNavItemLinkText}> ストア</span>
           </Link>
         </li>
         <li className={footerNavItem}>

@@ -1,0 +1,32 @@
+.fruit-item {
+  border-radius: .5rem;
+
+  &:link, &:visited, &:hover, &:active, &:focus {
+    color: $color-primary-text;
+    text-decoration: none;
+  }
+}
+
+.fruit-image {
+  border-radius: .5rem;
+}
+
+.fruit-name {
+  margin: .5rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.fruit-price {
+  margin: .5rem 0;
+}
+
+@media screen and (max-width: $breakpoints) {
+  .fruit-name {
+    font-size: .8rem;
+  }
+
+  .fruit-price {
+    font-size: .8rem;
+  }
+}

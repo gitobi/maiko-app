@@ -1,41 +1,20 @@
-import React, { useContext } from "react"
-import { Link, graphql } from "gatsby"
+import React from "react"
+import { graphql } from "gatsby"
 
-import ShopifyImage from "../components/atoms/images/shopify-image"
-import MinPrice from "../components/atoms/prices/min-price"
+import FruitGrid from "../components/organisms/fruit-grid"
 import BaseLayout from "../components/templates/base-layout"
 import Seo from "../components/seo"
 
-import { StoreContext } from "@gitobi/gitobi-shopify-context"
-
-
 const ShopPage = ({ data }) => {
-  const { store } = useContext(StoreContext)
-
   return (
     <BaseLayout>
       <Seo
-        title="Maiko オンラインストア"
-        description="Maiko のご購入は Maiko オンラインストアからどうぞ。"
+        title="ストア"
+        description="Maiko のご購入はストアからどうぞ。"
       />
-      <h1>Maiko オンラインストア</h1>
-      <ul>
-        {data.allShopifyProduct.edges.map(({ node }) => (
-          <li key={node.storefrontId}>
-            <ShopifyImage
-              src={node.images[0].originalSrc}
-              width={200}
-              alt={node.title}
-              key={node.images[0].id}
-            />
-            <h3>
-              <Link to={`/fruits/${node.storefrontId}`}>{node.title}</Link>
-            </h3>
-            <MinPrice amount={node.priceRangeV2.minVariantPrice.amount} />
-          </li>
-        ))}
-      </ul>
-      {console.debug(JSON.parse(JSON.stringify(store)))}
+      <h1>ストア</h1>
+      <h2>Maiko のご購入はストアからどうぞ。</h2>
+      <FruitGrid edges={data.allShopifyProduct.edges} />
     </BaseLayout>
   )
 }

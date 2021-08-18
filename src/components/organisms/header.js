@@ -36,7 +36,7 @@ const Header = () => (
         </li>
         <li className={headerNavItem}>
           <Link className={headerNavItemLink} to="/shop">
-            <FontAwesomeIcon icon={faStore} /> オンラインストア
+            <FontAwesomeIcon icon={faStore} /> ストア
           </Link>
         </li>
         <li className={headerNavItem}>

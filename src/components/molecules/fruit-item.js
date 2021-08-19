@@ -5,7 +5,6 @@ import ShopifyImage from "../atoms/images/shopify-image"
 import MinPrice from "../atoms/prices/min-price"
 
 import {
-  container,
   fruitItem,
   fruitImage,
   fruitName,

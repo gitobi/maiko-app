@@ -9,7 +9,7 @@ import {
 const FruitGrid = ({edges}) => (
   <section className={fruitGrid}>
     {edges.map(({ node }) => (
-      <FruitItem node={node} />
+      <FruitItem node={node} key={node.storefrontId} />
     ))}
   </section>
 )

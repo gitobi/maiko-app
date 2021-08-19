@@ -8,6 +8,13 @@ import BaseLayout from "./base-layout"
 import { StoreContext } from "@gitobi/gitobi-shopify-context"
 import Seo from "../seo"
 
+import {
+  twoColumnGrid,
+  fruitImage,
+  input,
+  button,
+} from "./fruit-page-layout.module.scss"
+
 const ProductPageLayout = ({ pageContext }) => {
   const { store, addVariantToCart } = useContext(StoreContext)
   const { product } = pageContext
@@ -47,66 +54,40 @@ const ProductPageLayout = ({ pageContext }) => {
     <BaseLayout>
       <Seo title={product.title} description={product.description} />
       <h1>{product.title}</h1>
-      <ShopifyImage
-        src={product.images[0].originalSrc}
-        width={200}
-        alt={product.title}
-        key={product.images[0].id}
-      />
-      {product.images.slice(1).map(image => {
-        return (
+      <section className={twoColumnGrid}>
+        <div>
           <ShopifyImage
-            src={image.originalSrc}
-            width={200}
+            className={fruitImage}
+            src={product.images[0].originalSrc}
+            width={600}
             alt={product.title}
-            key={image.id}
+            key={product.images[0].id}
           />
-        )
-      })}
+        </div>
+        <div>
+          <Price amount={variant.price} />
+          <label htmlFor="quantity">数量</label>
+          <input
+            className={input}
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="0"
+            step="1"
+            onChange={handleQuantityChange}
+            value={quantity}
+          />
+          <button
+            className={button}
+            type="submit"
+            disabled={!available || !store.checkoutEditable}
+            onClick={handleAddToCartClick}
+          >
+            カートに入れる
+          </button>
+        </div>
+      </section>
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
-
-      {options
-        .filter(option => option.name !== "Title")
-        .map(({ name, values }, index) => {
-          return (
-            <React.Fragment key={`${name}-${index}`}>
-              <label htmlFor={name}>{name}</label>
-              <select
-                name={name}
-                key={`${name}-${index}-select`}
-                onBlur={event => handleOptionBlur(index, event)}
-              >
-                {values.map(value => {
-                  return (
-                    <option value={value} key={`${name}-${index}-${value}`}>
-                      {value}
-                    </option>
-                  )
-                })}
-              </select>
-            </React.Fragment>
-          )
-        })}
-
-      <Price amount={variant.price} />
-      <label htmlFor="quantity">数量</label>
-      <input
-        type="number"
-        id="quantity"
-        name="quantity"
-        min="1"
-        step="1"
-        onChange={handleQuantityChange}
-        value={quantity}
-      />
-
-      <button
-        type="submit"
-        disabled={!available || !store.checkoutEditable}
-        onClick={handleAddToCartClick}
-      >
-        カートに入れる
-      </button>
     </BaseLayout>
   )
 }

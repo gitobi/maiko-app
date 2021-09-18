@@ -4,7 +4,7 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    description: `Maiko は、 Gitobi 合同会社が栽培・販売する日本の果物です。おいしく安心安全な日本の果物をいつでも食べられる幸せを、皆様にお贈りすることを私たちは目指しています。`,
+    description: `Maiko は技術革新を常に取り入れ、美味しさ追求し続ける日本のフルーツです。`,
     siteUrl: `https://maiko.app`,
     title: `Maiko`,
   },

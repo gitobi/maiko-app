@@ -34,7 +34,7 @@
     "gatsby-source-shopify": "5.1.0",
     "gatsby-transformer-sharp": "^3.9.0",
     "lodash": "^4.17.21",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "postcss": "8.2.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

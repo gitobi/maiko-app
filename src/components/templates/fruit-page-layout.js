@@ -58,7 +58,7 @@ const ProductPageLayout = ({ pageContext }) => {
 
   return (
     <BaseLayout>
-      <Seo title={product.title} description={metaDescription} />
+      <Seo title={product.title} description={metaDescription} imageUrl={product.featuredImage.originalSrc} />
       <h1>{product.title}</h1>
       <section className={twoColumnGrid}>
         <div>

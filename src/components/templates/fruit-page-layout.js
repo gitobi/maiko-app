@@ -19,7 +19,7 @@ const ProductPageLayout = ({ pageContext }) => {
   const { store, addVariantToCart } = useContext(StoreContext)
   const { product } = pageContext
 
-  const { options, variants } = product
+  const { options, variants, metafields } = product
   const [initialVariant] = variants
   const [variant, setVariant] = useState({ ...initialVariant })
   const handleOptionChange = (optionIndex, { target }) => {
@@ -50,9 +50,15 @@ const ProductPageLayout = ({ pageContext }) => {
     })
   }
 
+  const metaDescriptionElement = metafields.find(element => element.key === "metadescription")
+  let metaDescription = ''
+  if (metaDescriptionElement != null) {
+    metaDescription = metaDescriptionElement.value
+  }
+
   return (
     <BaseLayout>
-      <Seo title={product.title} description={product.description} />
+      <Seo title={product.title} description={metaDescription} />
       <h1>{product.title}</h1>
       <section className={twoColumnGrid}>
         <div>

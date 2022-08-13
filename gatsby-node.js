@@ -15,6 +15,10 @@ exports.createPages = async ({ graphql, actions }) => {
               id
               originalSrc
             }
+            metafields {
+              key
+              value
+            }
             options {
               name
               values

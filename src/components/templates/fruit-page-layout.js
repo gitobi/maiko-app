@@ -22,7 +22,7 @@ const ProductPageLayout = ({ pageContext }) => {
   const { options, variants } = product
   const [initialVariant] = variants
   const [variant, setVariant] = useState({ ...initialVariant })
-  const handleOptionBlur = (optionIndex, { target }) => {
+  const handleOptionChange = (optionIndex, { target }) => {
     const { value } = target
     const currentOptions = [...variant.selectedOptions]
 
@@ -65,6 +65,32 @@ const ProductPageLayout = ({ pageContext }) => {
           />
         </div>
         <div>
+
+          {options
+            .filter(option => option.name !== "Title")
+            .map(({ name, values }, index) => {
+              return (
+                <React.Fragment key={`${name}-${index}`}>
+                  <label htmlFor={name}>{name}</label>
+                  <select
+                    className={input}
+                    id={name}
+                    name={name}
+                    key={`${name}-${index}-select`}
+                    onChange={event => handleOptionChange(index, event)}
+                  >
+                    {values.map(value => {
+                      return (
+                        <option value={value} key={`${name}-${index}-${value}`}>
+                          {value}
+                        </option>
+                      )
+                    })}
+                  </select>
+                </React.Fragment>
+              )
+            })}
+
           <Price amount={variant.price} />
           <label htmlFor="quantity">数量</label>
           <input

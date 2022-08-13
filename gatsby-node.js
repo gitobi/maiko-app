@@ -11,6 +11,10 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             description
             descriptionHtml
+            featuredImage {
+              id
+              originalSrc
+            }
             images {
               id
               originalSrc

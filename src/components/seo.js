@@ -9,7 +9,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
+import logo from "../images/logo.png"
+
+function Seo({ description, lang, meta, title, imageUrl }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,6 +26,7 @@ function Seo({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImageUrl = imageUrl || logo
 
   return (
     <Helmet
@@ -60,6 +63,10 @@ function Seo({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImageUrl,
         },
       ].concat(meta)}
     />

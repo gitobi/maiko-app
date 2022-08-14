@@ -53,20 +53,12 @@ function Seo({ description, lang, meta, title, imageUrl }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaImageUrl,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: metaImageUrl,
         },
       ].concat(meta)}
     />

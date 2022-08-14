@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -18,18 +18,12 @@ function Seo({ description, lang, meta, title, imageUrl }) {
         site {
           siteMetadata {
             description
-            siteUrl
             title
           }
         }
       }
     `
   )
-
-  const [pathName, setPathName] = useState('')
-  useEffect(() => {
-    setPathName(window.location.pathname)
-  }, [])
 
   const metaDescription = description || site.siteMetadata.description
   const metaImageUrl = imageUrl || logo
@@ -46,10 +40,6 @@ function Seo({ description, lang, meta, title, imageUrl }) {
         {
           name: `description`,
           content: metaDescription,
-        },
-        {
-          property: `og:url`,
-          content: `${site.siteMetadata.siteUrl}${pathName}`,
         },
         {
           property: `og:title`,

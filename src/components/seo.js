@@ -17,8 +17,9 @@ function Seo({ description, lang, meta, title, imageUrl }) {
       query {
         site {
           siteMetadata {
-            title
             description
+            siteUrl
+            title
           }
         }
       }
@@ -32,6 +33,7 @@ function Seo({ description, lang, meta, title, imageUrl }) {
     <Helmet
       htmlAttributes={{
         lang,
+        prefix: `og: https://ogp.me/ns#`,
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -39,6 +41,10 @@ function Seo({ description, lang, meta, title, imageUrl }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: `og:url`,
+          content: `${site.siteMetadata.siteUrl}${window.location.pathname}`,
         },
         {
           property: `og:title`,
